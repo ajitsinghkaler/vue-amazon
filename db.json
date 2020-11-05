@@ -1,0 +1,27 @@
+{
+  "products": [{
+      "_id": 1,
+      "photo": "https://api.time.com/wp-content/uploads/2014/07/301386_full1.jpg?w=800&quality=85",
+      "title": "Harry Potter",
+      "author": "JK Rowling",
+      "price": "99",
+      "discounted_price": "79"
+    },
+    {
+      "_id": 2,
+      "photo": "https://pyxis.nymag.com/v1/imgs/8ad/bd7/9b4da2e7a5dd1d61b0a0a6f367f9b6ba94-12-got-episode-ranking.rsquare.w700.jpg",
+      "title": "Game Of Thrones",
+      "author": "RR Martin",
+      "price": "299",
+      "discounted_price": "179"
+    }
+  ],
+  "comments": [{
+    "id": 1,
+    "body": "some comment",
+    "postId": 1
+  }],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,3 +1,4 @@
+const URL = "http://localhost:3000"
  export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -31,7 +32,7 @@
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module'
+    // '@nuxtjs/eslint-module'
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -45,7 +46,10 @@
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
+  axios: {
+    proxy: true,
+    baseURL: URL
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
