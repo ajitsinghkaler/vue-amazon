@@ -5,7 +5,7 @@
     <div class="registerAddress mt-3">
       <div class="container-fluid c-section">
         <div class="row">
-          <div class="col-sm-2"></div>
+          <div class="col-sm-1"></div>
           <div class="col-sm-10">
             <div class="a-section a-spacing-medium">
               <div class="a-subheader a-breadcrumb a-spacing-small">
@@ -87,7 +87,7 @@
                         <a @click="onDeleteAddress(address.id,index)" href="#">Delete</a>
                         &nbsp; | &nbsp;
                         <!-- Set Address as Default -->
-                        <a @click="setDefault(address)" href="#">Set as Default</a>
+                        <a @click="setDefault(address)" href="#">Set as Delivery Address</a>
                       </div>
                     </div>
                   </div>
@@ -105,6 +105,8 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
+
 export default {
   async asyncData({ $axios }) {
     try {
@@ -125,6 +127,7 @@ export default {
   },
 
   methods: {
+    ...mapActions(["addUserAddress"]),
     async onDeleteAddress(id, index) {
       try {
         const response = await this.$axios.$delete(`addresses/${id}`);
@@ -139,8 +142,9 @@ export default {
     },
     async setDefault(data) {
       try {
-        const response = await this.$axios.$post(`defaultAddress`, data);
+        const response = await this.$axios.$post(`userAddress`, data);
         if (response) {
+          this.addUserAddress(data)
           this.message = "Address successfully set as default";
         }
       } catch (error) {

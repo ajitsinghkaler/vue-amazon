@@ -1783,7 +1783,7 @@ ul li.a-breadcrumb-divider {
 
 .combinedBuyBox .buyBox {
   border-radius: 4px;
-  box-shadow: 0 0 0 4px rgba(0, 0, 0, .1);
+  /* box-shadow: 0 0 0 4px rgba(0, 0, 0, .1); */
   display: block;
   border: 1px #ddd solid;
   background-color: #fff;

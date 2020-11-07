@@ -2,11 +2,7 @@
   <main class="listingPage">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-4 col-lg-3 col-xl-2">
-          <!-- Sidebar -->
-        </div>
-        <!-- Main Content -->
-        <div class="col-sm-8 col-lg-8 col-xl-10">
+        <div class="col-12">
           <FeaturedProduct />
           <div class="mainResults">
             <ul class="s-result-list">
@@ -40,9 +36,7 @@
                               {{ product.title }}
                               <span class="a-letter-space"></span>
                               <span class="a-letter-space"></span>
-                              <span class="a-size-small a-color-secondary"
-                                >Nov 3, 2020</span
-                              >
+
                             </h2>
                           </a>
                         </div>
@@ -54,36 +48,25 @@
                             }}</a></span
                           >
                         </div>
-                        <div class="a-row">
-                          <span class="a-size-small">Ships to USA</span>
-                        </div>
+
                         <div class="row">
                           <div class="col-sm-7">
+
                             <div class="a-row a-spacing-none">
                               <a href="#" class="a-link-normal a-text-normal">
-                                Hardcover
-                              </a>
-                            </div>
-                            <div class="a-row a-spacing-none">
-                              <a href="#" class="a-link-normal a-text-normal">
-                                <span class="a-offscreen"
-                                  >${{ product.discounted_price }}</span
-                                >
+
                                 <span class="a-color-base sx-zero-spacing">
                                   <span class="sx-price sx-price-large">
                                     <span class="sx-price-currency">$</span>
                                     <span class="sx-price-whole">
-                                      {{ product.discounted_price }}
+                                      {{ product.price }}
                                     </span>
                                     <sup class="sx-price-fractional">00</sup>
                                   </span>
                                 </span>
                               </a>
                               <span class="a-letter-space"></span>
-                              <span
-                                class="a-size-base-plus a-color-secondary a-text-strike"
-                                >${{ product.price }}.00</span
-                              >
+
                             </div>
                             <div class="a-row a-spacing-none">
                               <span class="a-size-small a-color-secondary"
@@ -92,12 +75,12 @@
                             </div>
                             <hr />
                             <span class="a-size-small a-color-secondary"
-                              >Other Formats:
+                              >Category:
                               <span class="a-letter-space"></span>
                               <a
                                 href="#"
                                 class="a-size-small a-link-normal a-text-normal"
-                                >Audio CD</a
+                                >{{product.category.type}}</a
                               >
                             </span>
                           </div>

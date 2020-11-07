@@ -2,6 +2,7 @@
   "products": [
     {
       "id": 1,
+      "length": 4450,
       "photo": "https://api.time.com/wp-content/uploads/2014/07/301386_full1.jpg?w=800&quality=85",
       "title": "Harry Potter",
       "author": {
@@ -10,13 +11,13 @@
       },
       "description": "Harry Potter is a series of seven fantasy novels written by British author J. K. Rowling. The novels chronicle the lives of a young wizard, Harry Potter, and his friends Hermione Granger and Ron Weasley, all of whom are students at Hogwarts School of Witchcraft and Wizardry.",
       "price": "99",
-      "discounted_price": "79",
       "category": {
         "type": "Books"
       }
     },
     {
       "id": 2,
+      "length": "6650",
       "photo": "https://pyxis.nymag.com/v1/imgs/8ad/bd7/9b4da2e7a5dd1d61b0a0a6f367f9b6ba94-12-got-episode-ranking.rsquare.w700.jpg",
       "title": "Game Of Thrones",
       "description": "Nine noble families wage war against each other in order to gain control over the mythical land of Westeros. Meanwhile, a force is rising after millenniums and threatens the existence of living men.",
@@ -25,7 +26,6 @@
         "about": "George Raymond Richard Martin, also known as GRRM, is an American novelist and short story writer, screenwriter, and television producer. He writes the series of epic fantasy novels A Song of Ice and Fire, which was adapted into the HBO series Game of Thrones."
       },
       "price": "299",
-      "discounted_price": "179",
       "category": {
         "type": "Books"
       }
@@ -47,10 +47,10 @@
     },
     {
       "country": "India",
-      "fullName": "Ajit Singh1",
-      "streetAddress1": "Vill Sunet PO J-Block BRS nagar Ludhiana",
+      "fullName": "Ajit Singh",
+      "streetAddress1": "Vill Sunet PO J Block BRS Nagar Ludhiana",
       "streetAddress2": "Near Ravidas Gurudwars",
-      "city": "Mumbai",
+      "city": "Ludhiana",
       "state": "Punjab",
       "zipCode": "560029",
       "phoneNumber": "07409965503",
@@ -59,12 +59,12 @@
       "id": 2
     }
   ],
-  "defaultAddress": {
+  "userAddress": {
     "country": "India",
-    "fullName": "Ajit Singh1",
-    "streetAddress1": "Vill Sunet PO J-Block BRS nagar Ludhiana",
+    "fullName": "Ajit Singh",
+    "streetAddress1": "Vill Sunet PO J Block BRS Nagar Ludhiana",
     "streetAddress2": "Near Ravidas Gurudwars",
-    "city": "Mumbai",
+    "city": "Ludhiana",
     "state": "Punjab",
     "zipCode": "560029",
     "phoneNumber": "07409965503",

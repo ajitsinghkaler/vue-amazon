@@ -5,16 +5,14 @@
         <div class="row">
           <div class="col-sm-2">
             <div class="logo-area">
-              <a href="#">
+              <nuxt-link to="/">
                 <img src="/img/logo.png" alt="logo" class="img-fluid" />
-              </a>
+              </nuxt-link>
             </div>
           </div>
           <div class="col-sm-6 pt-0">
             <Search />
           </div>
-
-          <div class="col-sm-4"></div>
         </div>
         <div class="row">
           <div class="col-sm-2 pl2">
@@ -25,82 +23,18 @@
                   <span class="nav-line-1" id="glow-ingress-line1"
                     >Deliver to</span
                   >
-                  <span class="nav-line-2" id="glow-ingress-line2">Dundee</span>
+                  <span class="nav-line-2" id="glow-ingress-line2">{{getUserAddress.city}}</span>
                 </div>
               </nuxt-link>
             </div>
           </div>
 
-          <div class="col-xl-6 col-lg-5 col-md-4 col-sm-6 p-0">
-            <div class="nav-fill">
-              <div class="nav-shop">
-                <nuxt-link
-                  to="/history"
-                  class="nav-a nav-a-2 nav-single-row-link"
-                >
-                  <span class="nav-line-2">
-                    Browsing history
-                    <span
-                      class="nav-icon nav-arrow"
-                      style="visibility: visible"
-                    ></span>
-                  </span>
-                </nuxt-link>
-              </div>
-              <div class="nav-xshop-container">
-                <div class="nav-xshop">
-                  <a class="nav-a" href="#">Today's Deals</a>
-                  <a class="nav-a" href="#">Your Amazon.com</a>
-                  <a class="nav-a" href="#">Gift cards</a>
-                  <a class="nav-a" href="#">Registry</a>
-                  <a class="nav-a" href="#">Sell</a>
-                </div>
-              </div>
-            </div>
+          <div class="col-sm-8 p-0">
+
           </div>
 
-          <div class="col-xl-4 col-lg-5 col-md-6 col-sm-4 p-0">
+          <div class="col-sm-2 p-0">
             <div class="nav-tools">
-              <a
-                href="#"
-                id="icp-nav-flyout"
-                class="nav-a nav-a-2 icp-link-style-2"
-              >
-                <span class="icp-nav-link-inner">
-                  <span class="nav-line-1">
-                    <span class="icp-nav-globe-img-2"></span>
-                    <span class="icp-nav-language">EN</span>
-                  </span>
-                  <span class="nav-line-2">
-                    &nbsp;
-                    <span
-                      style="visibility: visible"
-                      class="nav-icon nav-arrow"
-                    ></span>
-                  </span>
-                </span>
-              </a>
-
-              <span class="icp-nav-link-border"></span>
-              <nuxt-link
-                to="/register"
-                class="nav-a nav-a-2"
-                id="nav-link-account-list"
-                tabindex="0"
-              >
-                <span class="nav-line-1">Hello, Sign In</span>
-                <span class="nav-line-2">
-                  Account &amp; Lists
-                  <span
-                    style="visibility: visible"
-                    class="nav-icon nav-arrow"
-                  ></span>
-                </span>
-              </nuxt-link>
-              <nuxt-link to="/orders" class="nav-a nav-a-2 nav-single-row-link">
-                <span class="nav-line-1"></span>
-                <span class="nav-line-2">Orders</span>
-              </nuxt-link>
               <nuxt-link to="/cart" class="nav-a nav-a-2" id="nav-cart">
                 <span aria-hidden="true" class="nav-line-1"></span>
                 <span aria-hidden="true" class="nav-line-2"> Cart</span>
@@ -109,7 +43,8 @@
                   id="nav-cart-count"
                   aria-hidden="true"
                   class="nav-cart-count nav-cart-0"
-                >0</span>
+                  >{{ getCartLength }}</span
+                >
               </nuxt-link>
             </div>
           </div>
@@ -120,10 +55,31 @@
 </template>
 
 <script>
+import { mapGetters,mapActions } from "vuex";
 import Search from "~/components/Search";
 export default {
   components: {
-    Search
+    Search,
+  },
+  computed: {
+    ...mapGetters(["getCartLength","getUserAddress"]),
+  },
+  data(){
+    return {
+      address:{}
+    }
+  },
+  methods:{
+    ...mapActions(["addUserAddress"])
+  },
+  async mounted(){
+    try {
+      const response = await this.$axios.$get("/userAddress");
+      console.log(response);
+      this.addUserAddress(response);
+    } catch (error) {
+      console.log(error)
+    }
   }
 };
 </script>

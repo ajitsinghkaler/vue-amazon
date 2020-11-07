@@ -52,15 +52,7 @@
                       </div>
                     </div>
                     <div class="col-6 col-xl-5">
-                      <div class="authorBtn mt-2">
-                        <a href="#">
-                          <span class="btnFollow">
-                            <span class="a-btn-inner">
-                              <button class="a-btn-text">+ Follow</button>
-                            </span>
-                          </span>
-                        </a>
-                      </div>
+
                     </div>
                   </div>
                 </div>
@@ -72,7 +64,7 @@
               <div class="titleDiv">
                 <h1 class="productTitle">
                   <span class="largeTitle">{{product.title}}</span>
-                  <span class="smallTitle">Paperback</span>
+
                 </h1>
               </div>
               <div class="buylineinfo">
@@ -88,89 +80,7 @@
               </div>
               <div class="reviewGroup"></div>
               <hr style="margin-top: 10px" />
-              <div class="mediaMatrix">
-                <div class="formats">
-                  <a href="#" class="link-expander">
-                    >
-                    <span class="tmmShowPrompt"
-                      >See All 18 formats and editions</span
-                    >
-                  </a>
-                  <ul>
-                    <li class="swatchElement" style="width: 115px">
-                      <span class="a-list-item">
-                        <span class="a-button-toggle">
-                          <span class="a-button-inner">
-                            <a href="#" class="a-button-text">
-                              <span>Kindle</span>
-                              <br />
-                              <span class="a-col-secondary">-</span>
-                            </a>
-                          </span>
-                        </span>
-                        <span class="tmm-olp-links"></span>
-                        <span class="tmm-olp-links">
-                          <a href="#" class="a-size-mini">
-                            <span class="kcpAppBox">
-                              <span class="a-declarative">
-                                Read with Our
 
-                                <span class="a-text-bold">Free App</span>
-                              </span>
-                            </span>
-                          </a>
-                        </span>
-                      </span>
-                    </li>
-                    <li class="swatchElement" style="width: 115px">
-                      <span class="a-list-item">
-                        <span class="a-button-toggle">
-                          <span class="a-button-inner">
-                            <a href="#" class="a-button-text">
-                              <span>
-                                <img
-                                  src="/img/audiblelogo.png"
-                                  class="img-fluid"
-                                  style="width: 20px"
-                                />
-                                Audible</span
-                              >
-                              <br />
-                              <span class="a-col-secondary">-</span>
-                            </a>
-                          </span>
-                        </span>
-                        <span class="tmm-olp-links"></span>
-                        <span class="tmm-olp-links">
-                          <a href="#" class="a-size-mini">
-                            <span class="kcpAppBox">
-                              <span class="a-declarative">
-                                Read with Our
-
-                                <span class="a-text-bold">Free App</span> with
-                                your Audible Trial
-                              </span>
-                            </span>
-                          </a>
-                        </span>
-                      </span>
-                    </li>
-                    <li class="swatchElement" style="width: 115px">
-                      <span class="a-list-item">
-                        <span class="a-button-toggle">
-                          <span class="a-button-inner">
-                            <a href="#" class="a-button-text">
-                              <span>Paperback</span>
-                              <br />
-                              <span class="a-col-secondary">-</span>
-                            </a>
-                          </span>
-                        </span>
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
               <div class="bookDescription">
                 <div class="bookDescriptionInner">{{product.description}}</div>
               </div>
@@ -181,8 +91,8 @@
                     <div class="a-declative">
                       Length:
                       <span
-                        ><a href="#"
-                          >306 Pages <i class="a-icon a-icon-popover"></i></a
+                        ><span
+                          >{{product.length}} Pages</span
                       ></span>
                     </div>
                   </div>
@@ -195,21 +105,12 @@
               <div class="buyBox">
                 <div class="a-section">
                   <div class="clearfix">
-                    <div class="float-left">
-                      <form>
-                        <input
-                          type="radio"
-                          name="radio-group checked"
-                          id="test1"
-                        />
-                        <label for="test1">Buy Now</label>
-                      </form>
-                    </div>
+
                     <div class="float-right">
                       <span
                         class="a-size-medium a-color-price offer-price a-text-normal"
                       >
-                        ${{product.discounted_price}}
+                        ${{product.price}}
                       </span>
                     </div>
                   </div>
@@ -217,13 +118,7 @@
                 <div class="a-section a-spacing-none">
                   <div class="row">
                     <div class="col-5">
-                      <select>
-                        <option value="1">QTY: &nbsp; 1</option>
-                        <option value="2">QTY: &nbsp; 2</option>
-                        <option value="3">QTY: &nbsp; 3</option>
-                        <option value="4">QTY: &nbsp; 4</option>
-                        <option value="5">QTY: &nbsp; 5</option>
-                      </select>
+
                     </div>
                   </div>
                 </div>
@@ -233,14 +128,12 @@
                     <span class="a-color-base buyboxShippingLabel"></span>
                   </div>
                 </div>
-                <div class="a-section a-spacing-small">
-                  <div class="a-size-medium a-color-success">In Stock</div>
-                </div>
+
                 <div class="a-section a-spacing-mini">
                   Ships from and sold by Amazon.com
                 </div>
                 <div class="a-section">
-                  <div class="a-button-stack">
+                  <div @click="addProductToCart(product)" class="a-button-stack">
                     <span
                       class="a-spacing-small a-button-primary a-button-icon"
                     >
@@ -255,59 +148,11 @@
                       </span>
                     </span>
                   </div>
-                  <div class="a-button-stack">
-                    <span
-                      class="a-spacing-small a-button-primary a-button-icon"
-                    >
-                      <span class="a-button-inner">
-                        <i class="a-icon a-icon-buynow"></i>
-                        <input
-                          type="submit"
-                          name="submit.add-to-cart"
-                          class="a-button-input"
-                        />
-                        <span class="a-button-text">Buy Now</span>
-                      </span>
-                    </span>
-                  </div>
+
                 </div>
-                <div class="a-row">
-                  <div class="a-section a-spacing-none">
-                    <div class="a-section a-spacing-none a-spacing-top-mini">
-                      This Item Ships to
-                      <b>California</b>
-                      <b>Get It by Monday, Nov 23 - Monday, Sept, 30</b>
-                      Choose this date at checkout
-                    </div>
-                  </div>
+
+
                 </div>
-                <hr />
-                <div class="a-declaratine">
-                  <a href="#" class="a-link-normal">
-                    <div class="a-row a-spacing-mini">
-                      <i class="fal fa-map-market-alt"></i>
-                      <span class="a-size-small">Deliver to Claifornia</span>
-                    </div>
-                  </a>
-                </div>
-                <br />
-                <hr />
-                <!-- <div class="a-section">
-                  <div class="clearfix">
-                    <div class="float-left">
-                      <form>
-                        <input type="radio" name="radio-group" id="test2" />
-                        <label for="test2"></label>
-                      </form>
-                    </div>
-                    <div class="float-right">
-                      <span class="a-color-base offer-price a-text-normal"
-                        >${{product.discounted_price}}</span
-                      >
-                    </div>
-                  </div>
-                </div> -->
-              </div>
             </div>
             <div class="kcpAppBaseBox text-center">
               <img src="/img/readyondevice.png" alt="" class="img-fluid" />
@@ -327,12 +172,7 @@
                       <a href="#">
                         <img src="/img/ajit.jpg" class="img-fluid" alt="" />
                       </a>
-                      <div class="author-follow">
-                        <button class="followButton">
-                          <span class="pr-fb-icon"></span>
-                          <span class="pr-fb-text">Follow</span>
-                        </button>
-                      </div>
+
                     </div>
                   </div>
                 </div>
@@ -352,6 +192,8 @@
 </template>
 
 <script>
+import {mapActions} from "vuex";
+
 export default {
   async asyncData({ $axios, params }) {
     try {
@@ -364,6 +206,9 @@ export default {
       console.log(err);
     }
   },
+  methods:{
+    ...mapActions(["addProductToCart"])
+  }
 };
 </script>
 
