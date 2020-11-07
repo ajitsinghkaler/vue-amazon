@@ -2214,6 +2214,7 @@ a.kicsPopover span {
   color: #000;
   height: 31px;
   position: relative;
+  margin-top:15px;
 }
 
 .followButton {

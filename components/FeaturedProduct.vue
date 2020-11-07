@@ -21,7 +21,7 @@
             />
           </div>
         </div>
-        <div clas="col-sm-7 m-auto">
+        <div class="col-sm-7 m-auto">
           <div class="bx-root-dtls">
             <div class="bx-root-heading">The Program</div>
             <div class="bx-root-subtext">
