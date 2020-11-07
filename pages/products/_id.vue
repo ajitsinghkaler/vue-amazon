@@ -139,14 +139,18 @@
                     >
                       <span class="a-button-inner">
                         <i class="a-icon a-icon-cart"></i>
-                        <input
-                          type="submit"
-                          name="submit.add-to-cart"
-                          class="a-button-input"
-                        />
+
                         <span class="a-button-text">Add to Cart</span>
                       </span>
                     </span>
+                    <nuxt-link to="/cart"
+                      class="a-spacing-small a-button-primary a-button-icon"
+                    >
+                      <span class="a-button-inner">
+
+                        <span class="a-button-text">Proceed to Cart</span>
+                      </span>
+                    </nuxt-link>
                   </div>
 
                 </div>

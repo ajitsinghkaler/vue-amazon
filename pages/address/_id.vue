@@ -176,15 +176,7 @@
                       package may be undeliverable.</span
                     >
                   </div>
-                  <div class="a-spacing-top-small">
-                    <span>
-                      <a href="#">Tips for entering addresses</a>
-                    </span>
-                    <span>|</span>
-                    <span>
-                      <a href="#">APO/FPO address tips</a>
-                    </span>
-                  </div>
+
                   <div class="a-spacing-top-large">
                     <span class="a-button-register">
                       <span class="a-button-inner">

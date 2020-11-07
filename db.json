@@ -61,15 +61,15 @@
   ],
   "userAddress": {
     "country": "India",
-    "fullName": "Ajit Singh",
-    "streetAddress1": "Vill Sunet PO J Block BRS Nagar Ludhiana",
-    "streetAddress2": "Near Ravidas Gurudwars",
-    "city": "Ludhiana",
+    "fullName": "Amrit",
+    "streetAddress1": "204, Shell Colony Road",
+    "streetAddress2": "Near Tilak Nagar Local Station",
+    "city": "Mumbai",
     "state": "Punjab",
     "zipCode": "560029",
     "phoneNumber": "07409965503",
     "deliveryInstructions": "D-108 Majestic Residency, Tavarekere, Madiwala, Brindavan Nagar, BTM Layout, Bengaluru, Karnataka 56",
-    "securityCode": "1234",
-    "id": 2
+    "securityCode": "123",
+    "id": 1
   }
 }
