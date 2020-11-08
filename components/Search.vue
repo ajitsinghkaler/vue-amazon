@@ -30,6 +30,7 @@
     >
       <div role="search" class="sbx-amazon__wrapper">
         <input
+          v-model="query"
           type="search"
           name="search"
           placeholder="Search your favourite product"
@@ -38,6 +39,7 @@
           class="sbx-amazon__input"
         />
         <button
+          @click="onSearch"
           type="submit"
           title="Submit your search query."
           class="sbx-amazon__submit"
@@ -61,7 +63,22 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      query: "",
+    };
+  },
+  methods: {
+    onSearch() {
+      // debugger
+      this.$router.push({
+        path: "/search",
+        query: { title: this.query },
+      });
+    },
+  },
+};
 </script>
 
 <style>

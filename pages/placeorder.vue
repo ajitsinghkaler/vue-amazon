@@ -28,19 +28,19 @@
                         <div class="displayAddressDiv">
                           <!-- User's address -->
                           <ul class="displayAddressUL">
-                            <li>{{ address.fullName }}</li>
+                            <li>{{ getUserAddress.fullName }}</li>
                             <li>
                               {{
-                                address.streetAddress1 +
+                                getUserAddress.streetAddress1 +
                                 " " +
-                                address.streetAddress2
+                                getUserAddress.streetAddress2
                               }}
                             </li>
-                            <li>{{ address.city }}</li>
-                            <li>{{ address.country }}</li>
+                            <li>{{ getUserAddress.city }}</li>
+                            <li>{{ getUserAddress.country }}</li>
                             <li>
                               Phone:
-                              <span dir="ltr">{{ address.phoneNumber }}</span>
+                              <span dir="ltr">{{ getUserAddress.phoneNumber }}</span>
                             </li>
                           </ul>
                         </div>
@@ -153,19 +153,8 @@
 <script>
 import { mapGetters } from "vuex";
 export default {
-  async asyncData({ $axios }) {
-    try {
-      const response = await $axios.$get("/userAddress");
-      console.log(response);
-      return {
-        address: response,
-      };
-    } catch (error) {
-      console.log(error);
-    }
-  },
   computed: {
-    ...mapGetters(["getCart", "getTotalPrice"]),
+    ...mapGetters(["getCart", "getTotalPrice","getUserAddress"]),
   },
 };
 </script>
