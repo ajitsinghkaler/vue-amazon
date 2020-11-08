@@ -1,4 +1,4 @@
-# Amaazon Vue
+# Amazon Vue
 
 ## Build Setup
 
