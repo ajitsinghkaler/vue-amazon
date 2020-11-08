@@ -2,19 +2,32 @@
 
 ## Build Setup
 
-```bash
-# install dependencies
-$ npm install
+To run this project follow the steps below
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+1.  Clone this repository
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+2.  Run npm install in the root folder to install all the dependencies(Make sure you have node and npm installed)
 
-# generate static project
-$ npm run generate
-```
+`npm install`
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+3.  Run `npm run server` to start the server
+
+4.  Run `npm run dev` to start the demo server in the nuxt app
+
+
+Following are the functionalities implemented in this app
+
+1. Product Listing page homepage
+
+2. Product Detail Pages
+
+3. Adress page to see the address listing available
+
+4. Add and update address pages(Form Validations not done right now)
+
+5. Set default Adresss
+
+6. Cart Functionality
+
+7. Order page
+
